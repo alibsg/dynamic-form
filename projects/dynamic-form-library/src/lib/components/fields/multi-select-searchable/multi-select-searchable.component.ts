@@ -82,8 +82,13 @@ export class MultiSelectSearchableComponent implements OnInit {
   }
 
   selectOption(event: MatAutocompleteSelectedEvent) {
-    this.selected.update((selected) => [...selected, event.option.value]);
     this.currentSelected.set('');
+    const existingOption = this.selected().find(
+      (item) => item.value === event.option.value.value
+    );
+    // prevent adding an option twice
+    if (existingOption) return;
+    this.selected.update((selected) => [...selected, event.option.value]);
     this.control?.setValue(this.selected().map((item) => item.value));
     event.option.deselect();
   }
