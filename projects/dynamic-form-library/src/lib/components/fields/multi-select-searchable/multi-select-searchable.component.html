@@ -1,0 +1,29 @@
+<mat-form-field appearance="outline">
+  @if(options?.label){
+  <mat-label>{{ options?.label }}</mat-label>
+  }
+  <mat-chip-grid #chipGrid>
+    @for (option of selected(); track $index) {
+    <mat-chip-row (removed)="remove(option)">
+      {{ option.label }}
+      <button matChipRemove>
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </mat-chip-row>
+    }
+  </mat-chip-grid>
+  <input
+    [placeholder]="options?.placeHolder ?? ''"
+    [(ngModel)]="currentSelected"
+    [matChipInputFor]="chipGrid"
+    [matAutocomplete]="auto"
+  />
+  <mat-autocomplete
+    #auto="matAutocomplete"
+    (optionSelected)="selectOption($event)"
+  >
+    @for (option of filteredOptions(); track option.value) {
+    <mat-option [value]="option">{{ option.label }}</mat-option>
+    }
+  </mat-autocomplete>
+</mat-form-field>

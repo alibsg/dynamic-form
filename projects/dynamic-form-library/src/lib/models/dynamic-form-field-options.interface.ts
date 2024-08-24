@@ -15,5 +15,5 @@ export interface IDynamicFormFieldOptions {
     pattern?: string;
   };
   errorMessage?: string;
-  dropDownOptions?: IDynamicFormFieldDropdownOption;
+  dropDownOptions?: IDynamicFormFieldDropdownOption[];
 }
