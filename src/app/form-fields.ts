@@ -3,34 +3,37 @@ import { IDynamicFormFieldModel } from 'dynamic-form-library';
 export const formFields: IDynamicFormFieldModel[] = [
   {
     type: 'input',
+    classes: 'basis-1/3 mr-1',
     options: {
       label: 'name',
       validators: {
         required: true,
       },
-      formControlName: 'name',
-      placeHolder: 'user name',
+      formControlName: 'firstName',
+      placeHolder: 'Name',
     },
   },
   {
     type: 'input',
+    classes: 'basis-1/4 mr-1',
     options: {
       label: 'last name',
       formControlName: 'lastName',
-      placeHolder: 'user name',
+      placeHolder: 'Last Name',
     },
   },
   {
     type: 'multi-select-searchable',
+    classes: 'basis-full ',
     options: {
-      label: 'select option',
+      label: 'Options',
       formControlName: 'options',
-      placeHolder: 'choose option',
+      placeHolder: 'Choose an option',
       dropDownOptions: [
         { label: 'item1', value: 1 },
         { label: 'item2', value: 2 },
         { label: 'item3', value: 3 },
-        { label: 'item3', value: 4 },
+        { label: 'item4', value: 4 },
       ],
     },
   },

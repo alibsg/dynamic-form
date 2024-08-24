@@ -1,5 +1,7 @@
-<form [formGroup]="dynamicForm()">
+<form [formGroup]="dynamicForm()" class="flex flex-wrap mt-6">
   <ng-container *ngFor="let field of fields()">
-    <lib-dynamic-form-field [field]="field" />
+    <div [class]="field.classes ?? ''">
+      <lib-dynamic-form-field [field]="field" />
+    </div>
   </ng-container>
 </form>
