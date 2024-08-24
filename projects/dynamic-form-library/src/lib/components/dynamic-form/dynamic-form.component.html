@@ -1,8 +1,5 @@
-<p>dynamic-form works! {{fields()[0].type}}</p>
 <form [formGroup]="dynamicForm()">
   <ng-container *ngFor="let field of fields()">
-    <!-- <lib-input [options]="field.options"/> -->
-    <lib-dynamic-form-field [field]="field"/>
+    <lib-dynamic-form-field [field]="field" />
   </ng-container>
 </form>
-<button (click)="onSubmit()">Submit</button>

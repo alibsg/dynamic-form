@@ -1,4 +1,4 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { IDynamicFormFieldOptions } from '../../../models/dynamic-form-field-options.interface';
 import { MatInputModule } from '@angular/material/input';

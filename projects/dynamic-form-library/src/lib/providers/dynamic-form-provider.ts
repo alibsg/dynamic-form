@@ -6,5 +6,7 @@ export function provideDynamicForm(config: {
   fields: IDynamicFormFieldsType[];
 }): EnvironmentProviders {
   const merged = [...DynamicFieldsConfig, ...config.fields];
-  return makeEnvironmentProviders([{ provide: 'config', useValue: {fields: merged} }]);
+  return makeEnvironmentProviders([
+    { provide: 'config', useValue: { fields: merged } },
+  ]);
 }
