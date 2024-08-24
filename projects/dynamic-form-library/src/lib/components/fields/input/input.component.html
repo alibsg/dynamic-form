@@ -1,0 +1,10 @@
+<mat-form-field appearance="outline">
+  @if(options?.label){
+  <mat-label>{{ options?.label }}</mat-label>
+  }
+  <input
+    matInput
+    [placeholder]="options?.placeHolder ?? ''"
+    [formControlName]="options?.formControlName ?? ''"
+  />
+</mat-form-field>
