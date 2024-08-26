@@ -20,6 +20,7 @@ import {
       useExisting: FormGroupDirective,
     },
   ],
+  host: {hostId: crypto.randomUUID().toString()}
 })
 export class InputComponent {
   @Input() options?: IDynamicFormFieldOptions;

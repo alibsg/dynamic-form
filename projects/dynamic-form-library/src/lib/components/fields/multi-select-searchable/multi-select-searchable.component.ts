@@ -38,6 +38,7 @@ import { IDynamicFormFieldDropdownOption } from '../../../models/dynamic-form-fi
   ],
   templateUrl: './multi-select-searchable.component.html',
   styleUrl: './multi-select-searchable.component.css',
+  host: {hostId: crypto.randomUUID().toString()}
 })
 export class MultiSelectSearchableComponent implements OnInit {
   @Input() options?: IDynamicFormFieldOptions;
