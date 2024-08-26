@@ -5,7 +5,7 @@ import { NgFor } from '@angular/common';
 import { IDynamicFormFieldModel } from '../../models/dynamic-form-field-model.interface';
 import { DynamicFormService } from '../../services/dynamic-form.service';
 import { InputComponent } from '../fields/input/input.component';
-import { DynamicFormFieldComponent } from '../dynamic-form-field/dynamic-form-field.component';
+import { DynamicFormFieldDirective } from '../../directives/dynamic-form-field.directive';
 
 @Component({
   selector: 'dynamic-form',
@@ -14,7 +14,7 @@ import { DynamicFormFieldComponent } from '../dynamic-form-field/dynamic-form-fi
     NgFor,
     ReactiveFormsModule,
     InputComponent,
-    DynamicFormFieldComponent,
+    DynamicFormFieldDirective,
   ],
   templateUrl: './dynamic-form.component.html',
   styleUrl: './dynamic-form.component.css',
